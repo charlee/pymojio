@@ -1,0 +1,86 @@
+apps/                        GET, PUT
+apps/{id}                    GET
+apps/{id}/access             GET, DELETE, POST, PUT
+apps/{id}/admin              DELETE, POST
+apps/{id}/store              GET
+apps/{id}/store/{key}        DELETE, GET, POST, PUT
+
+events/                      GET
+events/{id}                  GET
+events/{id}/access           DELETE, GET, POST, PUT
+events/{id}/store            GET
+events/{id}/store/{key}      GET, DELETE, POST, PUT
+
+
+login/                       PUT
+login/{id}                   GET
+
+
+mojios/                      GET
+mojios/{id}                  GET
+mojios/{id}/access           DELETE, GET, POST, PUT
+mojios/{id}/events           GET
+mojios/{id}/image            DELETE, GET, POST, PUT
+mojios/{id}/owner            GET
+mojios/{id}/store            GET
+mojios/{id}/store/{key}      DELETE, GET, POST, PUT
+mojios/{id}/trips            GET
+mojios/{id}/user             DELETE, PUT
+
+
+observers/                   GET, POST, PUT
+observers/{id}               DELETE
+observers/intcheckpermission POST
+observers/intcreateobserver  POST
+
+
+schema/                      GET
+schema/list                  GET
+
+
+trips/                       GET
+trips/{id}                   GET, PUT
+trips/{id}/access            DELETE, GET, POST, PUT
+trips/{id}/events            GET
+trips/{id}/store             GET
+trips/{id}/store/{key}       DELETE, GET, POST, PUT
+trips/{id}/trip              POST
+trips/{id}/trips             POST
+
+
+users/                       GET, POST
+users/{id}                   GET, PUT
+users/{id}/access            DELETE, GET, POST, PUT
+users/{id}/apps              GET
+users/{id}/events            GET
+users/{id}/image             DELETE, GET, POST, PUT
+users/{id}/mojios            GET
+users/{id}/password          PUT
+users/{id}/role              GET
+users/{id}/store             GET
+users/{id}/store/{key}       DELETE, GET, POST, PUT
+users/{id}/trips             GET
+users/{id}/vehicles          GET
+users/me                     GET
+
+
+vehicles/                    GET
+vehicles/{id}                GET
+vehicles/{id}/access         DELETE, GET, POST, PUT
+vehicles/{id}/diagnostics    GET
+vehicles/{id}/events         GET
+vehicles/{id}/image          DELETE, GET, POST, PUT
+vehicles/{id}/owner          GET
+vehicles/{id}/store          GET
+vehicles/{id}/store/{key}    DELETE, GET, POST, PUT
+vehicles/{id}/trips          GET
+vehicles/{id}/users          GET
+vehicles/{id}/viewer         DELETE, POST
+
+
+vins/{id}                    GET
+vins/{id}/vehicleservices    GET
+
+
+
+
