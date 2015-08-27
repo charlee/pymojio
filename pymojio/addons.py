@@ -13,7 +13,7 @@ class AccessAddOn(MojioAddOn):
     __name__ = 'access'
 
     def get(self, id):
-        return self._request(id, self.__name__)
+        return self.resource._request(id, self.__name__)
 
 
 class StoreAddOn(MojioAddOn):
@@ -24,7 +24,7 @@ class StoreAddOn(MojioAddOn):
         return self._request(id, self.__name__, key)
 
     def list(self, id):
-        return self._request(id, self.__name__)
+        return self.resource._request(id, self.__name__)
 
 
 class EventsAddOn(MojioAddOn):
@@ -32,7 +32,7 @@ class EventsAddOn(MojioAddOn):
     __name__ = 'events'
 
     def list(self, id):
-        return self._request(id, self.__name__)
+        return self.resource._request(id, self.__name__)
 
 
 class ImageAddOn(MojioAddOn):
@@ -40,7 +40,7 @@ class ImageAddOn(MojioAddOn):
     __name__ = 'image'
 
     def get(self, id):
-        return self._request(id, self.__name__)
+        return self.resource._request(id, self.__name__)
 
 
 
@@ -49,7 +49,7 @@ class TripsAddOn(MojioAddOn):
     __name__ = 'trips'
 
     def list(self, id):
-        return self._request(id, self.__name__)
+        return self.resource._request(id, self.__name__)
 
 
 class OwnerAddOn(MojioAddOn):
@@ -57,7 +57,7 @@ class OwnerAddOn(MojioAddOn):
     __name__ = 'owner'
 
     def get(self, id):
-        return self._request(id, self.__name__)
+        return self.resource._request(id, self.__name__)
 
 
 class UsersAddOn(MojioAddOn):
@@ -65,7 +65,7 @@ class UsersAddOn(MojioAddOn):
     __name__ = 'users'
 
     def list(self, id):
-        return self._request(id, self.__name__)
+        return self.resource._request(id, self.__name__)
 
 
 class ViewerAddOn(MojioAddOn):
@@ -83,7 +83,7 @@ class MojiosAddOn(MojioAddOn):
 
     __name__ = 'mojios'
     def list(self, id):
-        return self._request(id, self.__name__)
+        return self.resource._request(id, self.__name__)
 
 
 class VehiclesAddOn(MojioAddOn):
@@ -91,6 +91,6 @@ class VehiclesAddOn(MojioAddOn):
     __name__ = 'vehicles'
 
     def list(self, id):
-        return self._request(id, self.__name__)
+        return self.resource._request(id, self.__name__)
 
 

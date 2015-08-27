@@ -1,4 +1,5 @@
 import requests
+import urllib
 
 from .addons import AccessAddOn, StoreAddOn, EventsAddOn, ImageAddOn, UsersAddOn, ViewerAddOn, TripsAddOn, MojiosAddOn, VehiclesAddOn
 
@@ -25,14 +26,29 @@ class MojioResource(object):
 
         headers = { 'MojioAPIToken': self.mojio.access_token }
 
+        print url
+
         r = requests.request(method, url, params=params, data=data, headers=headers)
 
         # TODO: raise http error
         return r.json()
 
     
-    def list(self):
-        return self._request()
+    def list(self, limit=10, offset=0, sortBy=None, desc=False):
+        params = {
+            'limit': limit,
+            'offset': offset,
+        }
+
+        if sortBy:
+            params['sortBy'] = sortBy
+
+        if desc:
+            params['desc'] = 'true'
+
+        url_params = urllib.urlencode(params)
+        
+        return self._request(params=url_params)
     
 
     def get(self, id):
@@ -129,6 +145,10 @@ class MojioUsers(MojioResourceFull):
         self.mojios = MojiosAddOn(self)
         self.vehicles = VehiclesAddOn(self)
         # TODO
+
+
+    def me(self):
+        return self._request('me')
 
 
 
